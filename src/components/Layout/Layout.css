@@ -1,0 +1,10 @@
+.user-input-section {
+    display: inline-block;
+    width: 30%;
+    background-color: aqua;
+}
+
+.map-container {
+    display: inline-block;
+    width: 70%;
+}
