@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import GoogleMapsApi from '../../services/googleMap';
-import UserInputForm from '../UserInputForm/UserInputForm';
+import UserInputForm from '../../components/UserInputForm/UserInputForm';
 import MapComponent from '../MapComponent/MapComponent';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 

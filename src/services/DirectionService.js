@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {GoogleAPIKey, BACKEND_URL, BASE_URL} from "./constants/constants";
+import {BACKEND_URL, BASE_URL} from "./constants/constants";
 
 
 const axiosInstance = axios.create({

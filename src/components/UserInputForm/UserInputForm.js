@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import InputControl from  '../InputControl/InputControl';
+import InputControl from  '../../container/InputControl/InputControl';
 import DirectionSummary from '../../container/DirectionSummary/DirectionSummary';
 
 class UserInputForm extends Component {

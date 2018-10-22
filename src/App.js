@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import Layout from './components/Layout/Layout';
+import Layout from './container/Layout/Layout';
 import axiosInstance, {postData, fetchDirectionInfo} from './services/DirectionService';
 import {SUCCESS, IN_PROGRESS, FAILED, IN_PROGRESS_ERROR_MSG} from './services/constants/constants';
 import withErrorHandler from './hoc/withErrorHandler';
 import Modal from './components/Modal/Modal';
-import Spinner from './container/Spinner/Spinner';
+import Spinner from './components/Spinner/Spinner';
 
 import './App.css';
 
