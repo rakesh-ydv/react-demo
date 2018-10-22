@@ -2,6 +2,8 @@ import React, {Component} from "react";
 
 import GoogleMapsApi from "../../services/googleMap";
 
+import './InputControl.css';
+
 /**
  * Re-usable Google Place AutoComplete InputControl Component 
  * 
@@ -55,7 +57,7 @@ class InputControl extends Component {
         const {labelText, helpText} = this.props;
         let closeBtn = null;
         if(this.state.ctrlValue){
-            closeBtn = <span onClick={this.clearValue}>X</span>
+            closeBtn = <span className="close-icon" onClick={this.clearValue}>X</span>
         }
         return <div className="control-container">
                     <label className="label">{labelText}</label>

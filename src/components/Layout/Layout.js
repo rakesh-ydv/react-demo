@@ -31,9 +31,7 @@ class Layout extends Component {
                             directionData={this.props.directionData}/>
                     </ErrorBoundary>
                     </div>
-                    <div className="map-container">
-                        <MapComponent directionData={this.props.directionData}/>
-                    </div>
+                    <MapComponent directionData={this.props.directionData}/>
                 </>
                 )
     }
