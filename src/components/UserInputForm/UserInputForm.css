@@ -1,0 +1,20 @@
+.form-section {
+    position: relative;
+    width: 90%;
+}
+
+.btn-container > .submit-btn, .btn-container >.reset-btn {
+    float: left;
+    width: 45%;
+    margin: 15px 5px;
+}
+
+.submit-btn, .reset-btn {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}

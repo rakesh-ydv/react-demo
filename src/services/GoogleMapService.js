@@ -1,6 +1,6 @@
 import GoogleMaps from 'google-maps';
 
-import {GoogleAPIKey} from "./constants/constants";
+import { GoogleAPIKey } from "./constants/constants";
 
 /**
  * @description setting google map config parameter

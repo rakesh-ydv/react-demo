@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {BACKEND_URL, BASE_URL} from "./constants/constants";
+import { BACKEND_URL, BASE_URL } from "./constants/constants";
 
 
 const axiosInstance = axios.create({
@@ -14,5 +14,5 @@ export const postData = (data) => {
 };
 
 export const fetchDirectionInfo = (token) => {
-    return  axiosInstance.get(BACKEND_URL + '/'+ token);
+    return axiosInstance.get(BACKEND_URL + '/' + token);
 };

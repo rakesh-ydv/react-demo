@@ -1,10 +1,30 @@
 .user-input-section {
-    display: inline-block;
-    width: 30%;
-    background-color: aqua;
+    width: 35%;
+    background-color: #eeebeb;
+    float: left;
+    text-align: left;
+    padding: 15px;
 }
 
 .map-container {
-    display: inline-block;
-    width: 70%;
+    width: 65%;
+    float: right;
 }
+
+@media only screen and (max-width: 1023px) {
+    .user-input-section {
+      width: 35%;
+    }
+    .map-container{
+        width: 65%;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .user-input-section {
+      width: 100%;
+    }
+    .map-container{
+        width: 100%;
+    }
+  }

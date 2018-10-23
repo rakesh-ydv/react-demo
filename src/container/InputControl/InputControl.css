@@ -1,7 +1,23 @@
 .close-icon {
-    margin-left: 4px;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    border: 1px solid black;
+    padding: 1px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.label {
-    margin: 5px;
+.control-container {
+    position: relative;
+}
+
+.control-input {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 6px 0px;
+    border: 1px solid grey;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
 }

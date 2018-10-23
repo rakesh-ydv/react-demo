@@ -1,11 +1,14 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
-import GoogleMapsApi from "../../services/googleMap";
+import GoogleMapsApi from "../../services/GoogleMapService";
 
 import "./MapComponent.css";
 
+/**
+ * Render Map and updates the Map when location changes.
+ */
 class MapComponent extends Component {
-    mapRef; 
+    mapRef;
     googleMapsApi;
     map;
     componentDidMount() {
@@ -58,31 +61,31 @@ class MapComponent extends Component {
 
     componentDidUpdate(props, state, snapShot) {
         if (snapShot) {
-            if(snapShot === 'UPDATE_MAP'){
+            if (snapShot === 'UPDATE_MAP') {
                 this.initMap();
             } else {
                 this.drawDirections(snapShot);
-            }  
+            }
         }
     }
 
     getSnapshotBeforeUpdate(prevProps) {
-        const {directionData} = this.props;
-        if(prevProps.directionData !== directionData){
-            if(directionData === null){
+        const { directionData } = this.props;
+        if (prevProps.directionData !== directionData) {
+            if (directionData === null) {
                 return 'UPDATE_MAP'
-            } 
+            }
             return this.props.directionData;
         }
-        return null
+        return null;
     }
-    
-    render(){
+
+    render() {
         return <>
-                <div ref="mapRef" className="map-container">
-                </div>
+            <div ref="mapRef" className="map-container">
+            </div>
         </>
-        
+
     }
 }
 

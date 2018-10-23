@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 import "./Modal.css";
 import Backdrop from '../../container/Backdrop/Backdrop';
-
+/**
+ * Shows a Modal with Backdrop when rendered.
+ */
 class Modal extends Component {
 
-    shouldComponentUpdate ( nextProps, nextState ) {
+    shouldComponentUpdate(nextProps, nextState) {
         return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
-    
-    render () {
+
+    render() {
         return (
             <>
                 <Backdrop show={this.props.show} clicked={this.props.modalClosed} />

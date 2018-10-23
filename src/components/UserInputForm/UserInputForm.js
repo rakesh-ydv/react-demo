@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import InputControl from  '../../container/InputControl/InputControl';
-import DirectionSummary from '../../container/DirectionSummary/DirectionSummary';
+import InputControl from '../../container/InputControl/InputControl';
+import DirectionSummary from '../DirectionSummary/DirectionSummary';
+
+import './UserInputForm.css';
 
 class UserInputForm extends Component {
     onSubmit = () => {
-        this.props.onSubmitHandler({fromInput: this.refs.fromInput.getCtrlValue(), toInput: this.refs.toInput.getCtrlValue()})
+        this.props.onSubmitHandler({ fromInput: this.refs.fromInput.getCtrlValue(), toInput: this.refs.toInput.getCtrlValue() });
     };
 
     onReset = () => {
@@ -16,23 +18,23 @@ class UserInputForm extends Component {
 
     render() {
         let directionSummary = null;
-        if(this.props.directionData != null){
+        if (this.props.directionData != null) {
             directionSummary = (<DirectionSummary
-                directionData={this.props.directionData}/>)
+                directionData={this.props.directionData} />)
         }
-        return  <div className="form-section"> 
+        return <div className="form-section">
             <div className="from-section">
-                <InputControl ref="fromInput" type="text" labelText="Starting point" helpText="Enter Staring Location"/>
+                <InputControl ref="fromInput" type="text" labelText="Starting point" helpText="Enter Staring Location" />
             </div>
             <div className="to-section">
-                <InputControl ref="toInput" type="text" labelText="Drop-off point" helpText="Enter Drop-off Location"/>
+                <InputControl ref="toInput" type="text" labelText="Drop-off point" helpText="Enter Drop-off Location" />
             </div>
             {directionSummary}
-            <div>
-                <input type="button" value="Submit" onClick={() => this.onSubmit()} />
-                <input type="button" value="Reset" onClick={() => this.onReset()} />
+            <div className="btn-container">
+                <input type="button" value="Submit" className="submit-btn" onClick={() => this.onSubmit()} />
+                <input type="button" value="Reset" className="reset-btn" onClick={() => this.onReset()} />
             </div>
-        </div>        
+        </div>
     }
 }
 
