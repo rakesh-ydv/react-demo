@@ -5,9 +5,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Table of Contents
 
--[Installing Dependencies](#install-dependency) 
--[Mock Api Configuration](#mock-api-configuration) 
--[Folder Structure](#folder-structure)
+- [Installing Dependencies](#install-dependency) 
+- [Mock Api Configuration](#mock-api-configuration) 
+- [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
