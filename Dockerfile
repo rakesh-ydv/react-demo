@@ -13,7 +13,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY package.json /usr/src/app/package.json
 RUN npm install --silent
 COPY . ./
-RUN npm build
+RUN npm run build
 
 # Stage 2 - the production environment
 FROM nginx:1.12-alpine
