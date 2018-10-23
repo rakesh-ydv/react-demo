@@ -22,6 +22,7 @@ class UserInputForm extends Component {
             directionSummary = (<DirectionSummary
                 directionData={this.props.directionData} />)
         }
+        let submitBtnTxt = this.props.directionData ? "Re-Submit" : "Submit";
         return <div className="form-section">
             <div className="from-section">
                 <InputControl ref="fromInput" type="text" labelText="Starting point" helpText="Enter Staring Location" />
@@ -31,7 +32,7 @@ class UserInputForm extends Component {
             </div>
             {directionSummary}
             <div className="btn-container">
-                <input type="button" value="Submit" className="submit-btn" onClick={() => this.onSubmit()} />
+                <input type="button" value={submitBtnTxt} className="submit-btn" onClick={() => this.onSubmit()} />
                 <input type="button" value="Reset" className="reset-btn" onClick={() => this.onReset()} />
             </div>
         </div>
