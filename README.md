@@ -6,6 +6,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Table of Contents
 
 - [Installing Dependencies](#install-dependency) 
+- [Docker Container](#docker-container) 
 - [Mock Api Configuration](#mock-api-configuration) 
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
@@ -19,6 +20,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Installing Dependencies
 To install the dependency run 
   npm install;
+
+## Docker Container
+To run the App inside Docker we will need to run the start.sh script.
 ## Mock Api Configuration
 
 In order to run the project, we need to add the following two things in src/services/constants/constants.js 
