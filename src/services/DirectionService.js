@@ -2,7 +2,11 @@ import axios from 'axios';
 
 import { BACKEND_URL, BASE_URL } from "./constants/constants";
 
+/**
+ * Common location for all the service
+ */
 
+ //Define a base url for the axios instance.
 const axiosInstance = axios.create({
     baseURL: BASE_URL
 });

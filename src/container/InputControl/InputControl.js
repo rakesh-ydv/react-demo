@@ -42,6 +42,7 @@ class InputControl extends Component {
     }
 
     onChangeHandler = (event) => {
+        //can track what user is typing.
         this.setState({ ctrlValue: event.target.value });
     };
 

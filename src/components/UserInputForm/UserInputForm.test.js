@@ -39,7 +39,7 @@ describe('<UserInputForm/>', () => {
         expect(wrapper.find({ labelText: "Drop-off point" })).toHaveLength(1);
     });
 
-    it('should call #onSubmit when submit button clicked', () => {
+    it('should call #onSubmit() when submit button clicked', () => {
         wrapper = mount(<UserInputForm onSubmitHandler={() => { }} />);
         let instance = wrapper.instance();
         const spy = jest.spyOn(instance, "onSubmit");

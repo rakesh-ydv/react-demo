@@ -4,7 +4,7 @@
 export const GoogleAPIKey = ''; //'';
 
 
-export const BASE_URL = 's';
+export const BASE_URL = '';
 export const BACKEND_URL = '/route';
 
 

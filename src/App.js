@@ -9,6 +9,9 @@ import Spinner from './components/Spinner/Spinner';
 
 import './App.css';
 
+/**
+ * Core Component which is Wrapper for all the other Component.
+ */
 class App extends Component {
   constructor() {
     super();

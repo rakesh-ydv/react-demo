@@ -5,6 +5,9 @@ import DirectionSummary from '../DirectionSummary/DirectionSummary';
 
 import './UserInputForm.css';
 
+/**
+ * Component for User Input
+ */
 class UserInputForm extends Component {
     onSubmit = () => {
         this.props.onSubmitHandler({ fromInput: this.refs.fromInput.getCtrlValue(), toInput: this.refs.toInput.getCtrlValue() });

@@ -15,7 +15,7 @@ describe('<InputControl/>', () => {
         spy.mockClear();
     });
 
-    it('should call #setUpControl when component mounts', () => {
+    it('should call #setUpControl() when component mounts', () => {
         spy = jest.spyOn(wrapper.instance(), "setUpControl");
         wrapper.instance().componentDidMount();
         expect(spy).toHaveBeenCalledTimes(1);

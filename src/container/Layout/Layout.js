@@ -6,6 +6,9 @@ import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 import './Layout.css';
 
+/**
+ * Layout component to have the Layout defined in one place.
+ */
 class Layout extends Component {
     constructor() {
         super();
