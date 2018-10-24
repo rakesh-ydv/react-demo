@@ -30,8 +30,11 @@ fi
 
 # # Start the application
 sudo npm install 
-sudo docker-compose up &
-sleep 5
-## Start Application inside docker
-echo 'Starting Test Suite'
-npm run start 
+
+## Starting building Docker image.
+sudo docker build -t react-demo .
+echo "Create Docker image Completed.. Starting Container with the same image"
+sudo docker run -p 80:80 react-demo &
+echo "Docker Image created."
+echo "Navigate to http://localhost to access the app."
+
