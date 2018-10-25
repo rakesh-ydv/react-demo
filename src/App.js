@@ -23,7 +23,7 @@ class App extends Component {
     if (response && response.data && response.data.token) {
       this.setState({ apiToken: response.data.token }, this.onUpdateCallback);
     } else {
-          //received empty from backend
+          //received empty response from backend. Hide the Spinner
       this.setState({ isLoading: false });
     }
 

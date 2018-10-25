@@ -29,11 +29,13 @@ class InputControl extends Component {
     }
 
     setUpControl = async () => {
+        //Add Google Places  Auto complete in the input control.
         this.maps = await this.props.GoogleMapsApi();
         const autocomplete = new this.maps.places.Autocomplete(
             this.refs.ctrl
         );
         this.maps.event.clearInstanceListeners(this.refs.ctrl);
+        // subscribe to the place_changed Google Autocomplete event.
         this.maps.event.addListener(autocomplete, `place_changed`, () => {
             const place = autocomplete.getPlace();
             this.setCtrlValue(place.formatted_address);

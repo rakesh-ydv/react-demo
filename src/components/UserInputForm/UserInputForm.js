@@ -10,11 +10,15 @@ import './UserInputForm.css';
  */
 class UserInputForm extends Component {
     onSubmit = () => {
+        //checks if both the to and from fields has values before calling api.
         if(this.refs.fromInput.getCtrlValue().trim() && this.refs.toInput.getCtrlValue().trim()){
             this.props.onSubmitHandler({ fromInput: this.refs.fromInput.getCtrlValue(), toInput: this.refs.toInput.getCtrlValue() });
         }
     };
 
+    /**
+     * Reset the input fields.
+     */
     onReset = () => {
         this.refs.fromInput.setCtrlValue('');
         this.refs.toInput.setCtrlValue('');
