@@ -10,7 +10,9 @@ import './UserInputForm.css';
  */
 class UserInputForm extends Component {
     onSubmit = () => {
-        this.props.onSubmitHandler({ fromInput: this.refs.fromInput.getCtrlValue(), toInput: this.refs.toInput.getCtrlValue() });
+        if(this.refs.fromInput.getCtrlValue().trim() && this.refs.toInput.getCtrlValue().trim()){
+            this.props.onSubmitHandler({ fromInput: this.refs.fromInput.getCtrlValue(), toInput: this.refs.toInput.getCtrlValue() });
+        }
     };
 
     onReset = () => {

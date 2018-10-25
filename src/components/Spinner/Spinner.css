@@ -1,3 +1,10 @@
+.spinner-container{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
 .Spinner {
   position: absolute;
   width: 64px;

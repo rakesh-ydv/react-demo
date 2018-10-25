@@ -10,11 +10,13 @@ import InputControl from '../../container/InputControl/InputControl';
 
 configure({ adapter: new Adapter() });
 
+
 describe('<UserInputForm/>', () => {
     let wrapper;
     beforeEach(() => {
         wrapper = shallow(<UserInputForm />);
     });
+    
 
     it('should not render DirectionSummary if no props set', () => {
         expect(wrapper.find(DirectionSummary)).toHaveLength(0);
@@ -45,5 +47,13 @@ describe('<UserInputForm/>', () => {
         const spy = jest.spyOn(instance, "onSubmit");
         wrapper.find(".submit-btn").simulate("click");
         expect(spy).toHaveBeenCalledTimes(1);
+    });
+
+    it('should not call #onSubmit() if there is no value in to/from field', () => {
+        const mockFn = jest.fn();
+        wrapper = mount(<UserInputForm onSubmitHandler={mockFn} />);
+        let instance = wrapper.instance();
+        wrapper.find(".submit-btn").simulate("click");
+        expect(mockFn.mock.calls.length).toBe(0);
     });
 });

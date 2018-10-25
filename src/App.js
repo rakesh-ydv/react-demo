@@ -22,13 +22,15 @@ class App extends Component {
     let response = await postData(formData);
     if (response && response.data && response.data.token) {
       this.setState({ apiToken: response.data.token }, this.onUpdateCallback);
+    } else {
+          //received empty from backend
+      this.setState({ isLoading: false });
     }
-    //received empty from backend
-    this.setState({ isLoading: false });
+
   };
 
   onUpdateCallback = async () => {
-    this.setState({ isLoading: true });
+    this.setState({ isLoading: true});
     let response = await fetchDirectionInfo(this.state.apiToken);
     if (response && response.data) {
       switch (response.data.status) {
